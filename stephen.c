@@ -628,25 +628,6 @@
 //	return 0;
 //}
 
-#include <stdio.h>
 
-int main()
-{
-	int n = 445;
-	int yu = 1;
-	int ji = 1;
-	int he = 0;
-	while (n != 0)
-	{
-		yu = n % 10;
-		n = n / 10;
-		ji = ji * yu;
-		he = he + yu;
-	}
-	printf("%d\n", ji - he);
-	return 0;
-}
-
-//*8.给你一个整数 n,请你帮忙计算并返回该整数[各位数字之积]与[各位数字之和]的差.
 
 
