@@ -223,7 +223,7 @@
 //}
 
 //*4.下面代码输入的结果是什么
-//
+
 //#include <stdio.h>
 //#include <string.h>
 //
@@ -344,3 +344,309 @@
 //	//printf("%d\n", j);
 //	return 0;
 //}
+
+//int a = 10;
+	//printf("%d\n", a);
+	//printf("%d\n", !a);	// ! - 逻辑非, 将变量的值由真变假, 由假变真
+
+//*6.计算十个整型数组元素的大小
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	printf("%d\n", sizeof(arr));
+//	return 0;
+//}
+
+
+//*7.计算数组的元素个数
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int num = sizeof(arr) / sizeof(arr[0]);
+//	printf("%d\n", num);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int a = (int)3.14;
+//	printf("%d\n", a);
+//	return 0;
+//}
+
+//*8.给你一个整数 n,请你帮忙计算并返回该整数[各位数字之积]与[各位数字之和]的差.
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int n = 0;
+//    int cheng = 1;
+//    int plus = 0;
+//    printf("请输入一个整数:\n");
+//    scanf("%d", &n);
+//    while (n)
+//    {
+//        int yu = n % 10;
+//        cheng = cheng * yu;
+//        plus = plus + yu;
+//        n = n / 10;
+//    }
+//    int result = cheng - plus;
+//    printf("%d\n", result);
+//    return 0;
+//}
+
+////*9.比较两个整数的较大值.(使用关系操作符或条件操作符完成)
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int max = 0;
+//	printf("请输入两个整数:\n");
+//	scanf("%d %d", &a, &b);
+//	if (a > b)
+//	{
+//		max = a;
+//	}
+//	else
+//	{
+//		max = b;
+//	}
+//	printf("max = %d\n", max);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	printf("%d\n", a || b);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int max = 0;
+//	printf("请输入两个整数:\n");
+//	scanf("%d %d", &a, &b);
+//	max = (a > b ? a : b);
+//	printf("%d\n", max);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int Add(int x, int y)
+//{
+//	int z = x + y;
+//	return z;
+//}
+//
+//int main()
+//{
+//	int a = 2;
+//	int b = 1;
+//	int sum = Add(a, b);
+//	printf("%d\n", sum);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int a = 10;//申请4个byte的空间
+//	int* p = &a;//有一种变量是用来存放地址的 - 指针变量 , p现在是指针变量, 它的类型是int*
+//	printf("%d\n", *p);// * - 解引用操作符
+//					   //p中存放的是a的地址, 而对p解引用后, p中存放的就是a地址对应的值
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char ch = 't';
+//	char* p = &ch;
+//	int a = 0;
+//	int* q = &a;
+//	printf("%d\n", sizeof(p));
+//	printf("%d\n", sizeof(q));
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int a = 0;
+//	char b = 'w';
+//	char* q = &b;
+//	printf("请输入一个整数, 一个字符数:\n");
+//	scanf("%d %c", &a, &b);
+//	printf("%d\n");
+//	printf("%c\n");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	printf("%d\n", sizeof(int*));
+//	printf("%d\n", sizeof(char*));
+//	printf("%d\n", sizeof(short*));
+//	printf("%d\n", sizeof(float*));
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <string.h>
+//
+//int main()
+//{
+//	char arr[] = { 't','z','y' };
+//	printf("%d\n", strlen(arr));
+//	return 0;
+//}
+
+//*10. 写一个函数, 求两个数的较大值
+
+//方法一:
+//#include <stdio.h>
+//
+//int Max(int x, int y)
+//{
+//	int z = (x > y ? x : y);
+//	return z;
+//}
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 11;
+//	int max = Max(a, b);
+//	printf("max = %d\n", max);
+//	return 0;
+//}
+
+//方法二:
+//#include <stdio.h>
+//
+//int Max(int x, int y)
+//{
+//	int z = 0;
+//	if (x > y)
+//	{
+//		z = x;
+//	}
+//	else
+//	{
+//		z = y;
+//	}
+//	return z;
+//}
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 11;
+//	int max = Max(a, b);
+//	printf("max = %d\n", max);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+////创建一个结构体类型(Book)
+//struct Book		//struct - 结构体关键字 //Book	-	类型名称
+//{
+//	char name[20];
+//	short price;
+//};				//{}内描述Book的相关属性, ; - 类型定义的结束标志, 不能少
+//int main()
+//{
+//	//利用结构体类型 - 创建一个该类型的结构体变量(b1)
+//	struct Book b1 = { "C语言程序设计", 55 };
+//	printf("%s\n", b1.name);
+//	printf("%d\n", b1.price);	//. - 结构体变量成员操作符, name和price是b1下的两个成员
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//struct Book
+//{
+//	char name[20];
+//	short price;
+//};
+//int main()
+//{
+//	struct Book b1 = { "C语言程序设计", 55 };
+//	struct Book* p = &b1;		//结构体类型的指针变量
+//	printf("%s\n", (*p).name);
+//	printf("%d\n", (*p).price);	//这种有点啰嗦
+//	printf("%s\n", p->name);
+//	printf("%d\n", p->price);	//-> - 结构体指针成员操作符, 表示p指向的对象b1的name成员
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int sum(int a)
+//{
+//	int c = 0;
+//	static int b = 3;
+//	c += 1;
+//	b += 2;
+//	return (a + b + c);
+//}
+//
+//int main()
+//{
+//	int i;
+//	int a = 2;
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%d,", sum(a));
+//	}
+//	return 0;
+//}
+
+#include <stdio.h>
+
+int main()
+{
+	int n = 445;
+	int yu = 1;
+	int ji = 1;
+	int he = 0;
+	while (n != 0)
+	{
+		yu = n % 10;
+		n = n / 10;
+		ji = ji * yu;
+		he = he + yu;
+	}
+	printf("%d\n", ji - he);
+	return 0;
+}
+
+//*8.给你一个整数 n,请你帮忙计算并返回该整数[各位数字之积]与[各位数字之和]的差.
+
+
